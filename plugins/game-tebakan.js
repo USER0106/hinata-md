@@ -16,7 +16,7 @@ let imgr = flaaa.getRandom()
   ${json.soal}
 
 Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik ${usedPrefix}hasa untuk bantuan
+Ketik ${usedPrefix}hteb untuk bantuan
 Bonus: ${poin} XP
     `.trim()
     conn.tebaktebakan[id] = [
