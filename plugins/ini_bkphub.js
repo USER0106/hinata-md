@@ -7,15 +7,12 @@ let fdoc = {quoted:{key : {participant : '0@s.whatsapp.net'},message: {documentM
 if (!text) throw `Contoh penggunaan ${usedPrefix}${command} japan`
 let f = await fetch(`https://betabotz-api.herokuapp.com/api/search/xvideos?query=${text}&apikey=BetaBotz`)
 let xx = await f.json()
-let teks = xx.result.map(v => {
-return `
-Judul *${v.title}*
+let str = xx.result.map((v, index) => {
+        return `${1 + index}. Judul *${v.title}*
 Info: ${v.info}
-Link: ${v.link}
-      `.trim()
-  }).filter(v => v).join('\n\n▣═━–〈 *SEARCH* 〉–━═▣\n\n')
-  //m.reply(teks)
-  await conn.sendButton(m.chat, teks, wm, null, [
+Link: ${v.link}`.trim()
+    }).join('\n\n')
+    await conn.sendButton(m.chat, str, wm, null, [
                 ['Search!', `${usedPrefix + command}`]
             ], m, fdoc)
     }
@@ -24,15 +21,12 @@ Link: ${v.link}
 if (!text) throw `Contoh penggunaan ${usedPrefix}${command} japan`
 let f = await fetch(`https://betabotz-api.herokuapp.com/api/search/xnxx?query=${text}&apikey=BetaBotz`)
 let xx = await f.json()
-let teks = xx.result.map(v => {
-return `
-Judul *${v.title}*
+let str = xx.result.map((v, index) => {
+        return `${1 + index}. Judul *${v.title}*
 Info: ${v.info}
-Link: ${v.link}
-      `.trim()
-  }).filter(v => v).join('\n\n▣═━–〈 *SEARCH* 〉–━═▣\n\n')
-  //m.reply(teks)
-  await conn.sendButton(m.chat, teks, wm, null, [
+Link: ${v.link}`.trim()
+    }).join('\n\n')
+    await conn.sendButton(m.chat, str, wm, null, [
                 ['Dlbokep!', `${usedPrefix}dlbokep ${xx.result[0].link}`]
             ], m, fdoc)
     }
@@ -41,16 +35,13 @@ Link: ${v.link}
 if (!text) throw `Contoh penggunaan ${usedPrefix}${command} japan`
 let f = await fetch(`https://betabotz-api.herokuapp.com/api/search/pornhub?query=${text}&apikey=BetaBotz`)
 let xx = await f.json()
-let teks = xx.results.map(v => {
-return `
-Judul *${v.title}*
+let str = xx.result.map((v, index) => {
+        return `${1 + index}. Judul *${v.title}*
 views: ${v.views}
 author: ${v.author}
-link: ${v.link}
-      `.trim()
-  }).filter(v => v).join('\n\n▣═━–〈 *SEARCH* 〉–━═▣\n\n')
-  //m.reply(teks)
-  await conn.sendButton(m.chat, teks, wm, null, [
+link: ${v.link}`.trim()
+    }).join('\n\n')
+    await conn.sendButton(m.chat, str, wm, null, [
                 ['Search!', `${usedPrefix + command}`]
             ], m, fdoc)
     }
@@ -58,18 +49,14 @@ link: ${v.link}
 if (!text) throw `Contoh penggunaan ${usedPrefix}${command} japan`
 let f = await fetch(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=9b817532fadff8fc7cb86862&query=${text}`)
 let xx = await f.json()
-let teks = xx.result.map(v => {
-return `
-Judul *${v.title}*
+let str = xx.result.map((v, index) => {
+        return `${1 + index}. Judul *${v.title}*
 views: ${v.views}
 duration: ${v.duration}
 uploader: ${v.uploader}
-link: ${v.link}
-
-      `.trim()
-  }).filter(v => v).join('\n\n▣═━–〈 *SEARCH* 〉–━═▣\n\n')
-  //m.reply(teks)
-  await conn.sendButton(m.chat, teks, wm, null, [
+link: ${v.link}`.trim()
+    }).join('\n\n')
+    await conn.sendButton(m.chat, str, wm, null, [
                 ['Dlbokep!', `${usedPrefix}dlbokep ${xx.result[0].link}`]
             ], m, fdoc)
     }
