@@ -49,6 +49,6 @@ return m.reply('Error kan')
 
 }
 handler.command = handler.help = ['sfx', 'sfx2']
-handler.tags = ['random']
+handler.tags = ['audio']
 
 export default handler

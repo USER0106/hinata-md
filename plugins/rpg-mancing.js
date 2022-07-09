@@ -1,6 +1,4 @@
-let { MessageType } = (await import('@adiwajshing/baileys')).default
 
-let wm = global.wm
 let handler = async (m, { conn, usedPrefix, owner }) => { 
      try {
         let __timers = (new Date - global.db.data.users[m.sender].lastfishing)
@@ -46,11 +44,11 @@ ${ usedPrefix }Cook catfish `
         conn.reply( m.chat, mcng, m)
          if (psepick > 0 ) {
          	global.db.data.users[m.sender].psepick += psepick * 1
-         conn.sendButton( m.chat, `You Get 🎁chest weapons epic ${psepick} item`, wm, [[`again`, `.mancing`]], m)
+         conn.sendButton( m.chat, `You Get 🎁chest weapons epic ${psepick} item`, `Sad-Bot`, [[`again`, `.mancing`]], m)
          } 
         if  (psenjata > 0 ) {
         	global.db.data.users[m.sender].psenjata+= psenjata * 1
-        conn.sendButton( m.chat, `You Get 🎁chest weapons ${psenjata} item`, wm, [[`Again`, `.mancing`]], m)
+        conn.sendButton( m.chat, `You Get 🎁chest weapons ${psenjata} item`, `Sad-Bot`, [[`Again`, `.mancing`]], m)
         	}
         }, 38000)
 
@@ -84,7 +82,8 @@ ${ usedPrefix }Cook catfish `
         if (owner) {
             let file = require.resolve(__filename)
             for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
-                conn.sendMessage(jid, file + ' error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', MessageType.text)
+            conn.reply(jid, file + ' error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', m)
+                
             }
         }
     }

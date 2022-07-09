@@ -35,11 +35,11 @@ await conn.sendHydrated(m.chat, caption, wm, x.getRandom(), null, null, null, nu
     
 if (command == 'gimage2') {
 let caption = `*Hasil pencarian* ${text}\n\n*Note:* Kann`
-let url = `https://bx-hunter.herokuapp.com/api/image-search?text=${text}&apikey=FuckBitch`
+let url = `https://bx-hunter.herokuapp.com/api/googleimage?query=${text}&apikey=dno8pZJW`
 let js = await fetch(url)
 let jp = await js.json()
-let x = jp.url
-await conn.sendHydrated(m.chat, caption, wm, x, null, null, null, null, [
+let x = jp.result
+await conn.sendHydrated(m.chat, caption, wm, x.getRandom(), null, null, null, null, [
       ['Gimage3', usedPrefix + 'gimage1 ' + text],
       ['Gimage4', usedPrefix + 'gimage4 ' + text],
       ['Gimage5', usedPrefix + 'gimage5 ' + text]
@@ -62,8 +62,7 @@ let caption = `*Hasil pencarian* ${text}\n${x.origin.title}\n${x.origin.source}\
 let url = `https://api-xcoders.xyz/api/search/image2?query=${text}&apikey=xcoders`
 let js = await fetch(url)
 let jp = await js.json()
-let x = jp.result
-await conn.sendHydrated(m.chat, caption, wm, x.url, null, null, null, null, [
+await conn.sendHydrated(m.chat, caption, wm, jp.result[0].url, null, null, null, null, [
       ['Gimage5', usedPrefix + 'gimage1 ' + text],
       ['Gimage6', usedPrefix + 'gimage6 ' + text],
       ['Gimage', usedPrefix + 'gimage ' + text]
