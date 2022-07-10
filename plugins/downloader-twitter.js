@@ -1,12 +1,24 @@
 import fetch from 'node-fetch'
+import hx from 'hxz-api'
 
 let handler = async (m, { conn, text }) => {
+try {
 	if (!text) throw 'Input URL'
 	let res = await twitterDl(text)
 	await m.reply('_In progress, please wait..._')
 	for (let x = 0; x < res.media.length; x++) {
 		let caption = x === 0 ? res.caption.replace(/https:\/\/t.co\/[a-zA-Z0-9]+/gi, '').trim() : ''
 		conn.sendFile(m.chat, res.media[x].url, '', caption, m)
+	}
+	} catch {
+	/* Twit */
+await hx.fbdown(`${text}`)
+            .then(G => {
+            let ten = `${G.HD}`
+            conn.sendHydrated(m.chat, ' ', `*desc* : ${G.desc}
+━━━━━•─────────────── 
+       ⇆ㅤ◁ㅤ ❚❚ㅤ ▷ㅤ↻`, await (await fetch(ten)).buffer(), text, '🌎 ᴜ ʀ ʟ', null,null, [[null,null],[null,null],[null,null]],m)
+            })
 	}
 }
 handler.help = ['twitter']

@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 let { MessageType } = (await import('@adiwajshing/baileys')).default
-let wibu = `https://api.zacros.my.id/randomimg/loli`    
-let thumb = await(await fetch(wibu)).buffer()
+let wibu = flaaa.getRandom()
+let thumb = await(await fetch(wibu + 'Shop')).buffer()
 const potion = 500
 const Sgold = 3000
 const Bgold = 6000
@@ -81,97 +81,96 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
     let _type = (args[1] || '').toLowerCase()
     let jualbeli = (args[0] || '').toLowerCase()
     const Kchat = `
-*🎒 shops*
+*🎒 S H O P*
 *🧪 Penggunaan :*
-_${usedPrefix}shops <Buy|sell> <item> <jumlah>_
-Contoh penggunaan: _*${usedPrefix}shops buy potion 1*_
+_${usedPrefix}shop <Buy|sell> <item> <jumlah>_
+Contoh penggunaan: _*${usedPrefix}shop buy potion 1*_
 *📮 Note :* 
 bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
 🛍️ List Barang:
-━━━━━━━━━━━━━━━━━━━
-*♻ Barang   | 💲 Harga beli*
-━━━━━━━━━━━━━━━━━━━
-*🥤 Potion:* ${potion}
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
+│» *♻ Barang   | 💲 Harga beli*
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
+│» *🥤 Potion:* ${potion}
 *🍶 Aqua:* ${Baqua}
-*🪙  Gold :* ${Bgold}
+│» *🪙  Gold :* ${Bgold}
 *💎 Diamond:* ${Bdiamond}
-*🪨 Batu:* ${Bbatu}
+│» *🪨 Batu:* ${Bbatu}
 *🪵 Kayu:* ${Bkayu}
-*🕸️ String:* ${Bstring}
+│» *🕸️ String:* ${Bstring}
 *⛓️ Iron:* ${Biron}
-*🗑️ Sampah:* ${Bsampah}
+│» *🗑️ Sampah:* ${Bsampah}
 *📦 Common:* ${Bcommon} 
-*🛍️ Uncommon:* ${Buncommon}
+│» *🛍️ Uncommon:* ${Buncommon}
 *🎁 Mythic:* ${Bmythic}
-*🧰 Legendary:* ${Blegendary}
+│» *🧰 Legendary:* ${Blegendary}
 *📫 Pet:* ${Bpet}
-*🥼 Armor:* ${armor}
+│» *🥼 Armor:* ${armor}
 *🎣 Fishingrod:* ${pancing}
-*🪱 Umpan:* ${Bumpan}
+│» *🪱 Umpan:* ${Bumpan}
 *🌾 Bibit mangga:* ${Bjagung}
-*🌾 Bibit apel:* ${Bapel}
+│» *🌾 Bibit apel:* ${Bapel}
 *🌾 Bibit jeruk:* ${Bjeruk}
-*🌾 Bibit pisang:* ${Bapel}
+│» *🌾 Bibit pisang:* ${Bapel}
 *🌾 Bibit anggur:* ${Banggur}
-━━━━━━━━━━━━━━━━━━━
-*♻ Barang   | 💲 Harga Jual*
-━━━━━━━━━━━━━━━━━━━
-*🥤 Potion:* ${Spotion}
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
+│» *♻ Barang   | 💲 Harga Jual*
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
+│» *🥤 Potion:* ${Spotion}
 *🪙 Gold:* ${Sgold}
-*🧭 Arloji:* ${Sarloji}
+│» *🧭 Arloji:* ${Sarloji}
 *🪨 Batu:* ${Sbatu}
-*🪵 Kayu:* ${Skayu}
+│» *🪵 Kayu:* ${Skayu}
 *🕸️ String:* ${Sstring}
-*⛓️ Iron:* ${Siron}
+│» *⛓️ Iron:* ${Siron}
 *💎 Diamond:* ${Sdiamond}
-*🗑️ Sampah:* ${Ssampah}
+│» *🗑️ Sampah:* ${Ssampah}
 *📦 Common:* ${Scommon}
-*🛍️ Uncommon:* ${Suncommon}
+│» *🛍️ Uncommon:* ${Suncommon}
 *🎁 Mythic:* ${Smythic}
-*🧰 Legendary:* ${Slegendary}
+│» *🧰 Legendary:* ${Slegendary}
 *📫 Pet:* ${Spet}
-*🥭 Mangga:* ${Sjagung}
+│» *🥭 Mangga:* ${Sjagung}
 *🍎 Apel:* ${Sapel}
-*🍊 Jeruk:* ${Sjeruk}
+│» *🍊 Jeruk:* ${Sjeruk}
 *🍌 Pisang:* ${Sapel}
-*🍇 Anggur:* ${Sanggur}
-━━━━━━━━━━━━━━━━━
-*🦊 Pet.      | 💲 Harga Beli*
-━━━━━━━━━━━━━━━━━
-*🐱 Kucing:* ${Bkucing} 🪙
+│» *🍇 Anggur:* ${Sanggur}
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
+│» *🦊 Pet.      | 💲 Harga Beli*
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
+│» *🐱 Kucing:* ${Bkucing} 🪙
 *🐶 Anjing:* ${Banjing} 🪙
-*🦊 Fox:* ${Bfox} 🪙 
+│» *🦊 Fox:* ${Bfox} 🪙 
 *🐴 Kuda:* ${Bkuda} 🪙 
-*🐺 Serigala:* ${Bserigala} 🪙
+│» *🐺 Serigala:* ${Bserigala} 🪙
 *🦜 Phonix:* ${Bphonix} 🪙
-*🐎 Centaur:* ${Bcentaur} 🪙
+│» *🐎 Centaur:* ${Bcentaur} 🪙
 *🦅 Griffin:* ${Bgriffin} 🪙
-*🐉 Naga:* ${Bnaga} 🪙
+│» *🐉 Naga:* ${Bnaga} 🪙
 *🥩 Foodpet:* ${Bfood} 💲
-━━━━━━━━━━━━━━━━━
-*🔨 Upgrade & Repair | 💲 Harga*
-━━━━━━━━━━━━━━━━━
-*◪ Upgrade ⏫*
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
+│» *🔨 Upgrade & Repair | 💲 Harga*
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
+│» *◪ Upgrade ⏫*
 *🥼 Armor:* ${uparmor} 💎 ${_armor == 0 ? '(Belum memiliki)' : _armor == 5 ? '( *Level max* )' : ''}
-*🎣 Fishingrod:* ${uppancing} 💎
+│» *🎣 Fishingrod:* ${uppancing} 💎
 ╰▸ *Durability:* ${durfishingrod} ${_pancing == 0 ? '(Belum memiliki)' : _pancing == 5 ? '( *Level max* )' : ''}
-*⛏️ Pickaxe:* ${uppickaxe} 💎
+│» *⛏️ Pickaxe:* ${uppickaxe} 💎
 ╰▸ *Durability:* ${durpickaxe} ${_pickaxe == 0 ? '(Belum memiliki)' : _pickaxe == 5 ? '( *Level max* )' : ''}
-*🗡️ Sword:* ${upsword} 💎
+│» *🗡️ Sword:* ${upsword} 💎
 ╰▸ *Durability:* ${dursword} ${_sword == 0 ? '(Belum memiliki)' : _sword == 5 ? '( *Level max* )' : ''}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-*◪ Repair 🔨*
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
+│» *◪ Repair 🔨*
 *🎣 Fishingrod:* ${refishingrod} 💎 ${_pancing == 0 ? '(Belum memiliki)' : _pancing == 5 ? '( *Level max* )' : ''}
-╰▸ + ${drefishingrod} Durability 
+│»  + ${drefishingrod} Durability 
 *⛏️ Pickaxe:* ${repickaxe} 💎 ${_pickaxe == 0 ? '(Belum memiliki)' : _pickaxe == 5 ? '( *Level max* )' : ''}
-╰▸ + ${drepickaxe} Durability
+│»  + ${drepickaxe} Durability
 *🗡️ Sword:* ${resword} 💎 ${_sword == 0 ? '(Belum memiliki)' : _sword == 5 ? '( *Level max* )' : ''}
-╰▸ + ${dresword} Durability
-━━━━━━━━━━━━━━━━━
-━━━━━━━━━━━━━━━━━
+│»  + ${dresword} Durability
+⛊━━━┄┄┄┄┄┄┄┄┄━━━⛊
 `.trim()
     try {
-        if (/shops|toko|buy/i.test(command)) {
+        if (/shop|toko|buy/i.test(command)) {
             const count = args[2] && args[2].length > 0 ? Math.min(99999999999999999999999, Math.max(parseInt(args[2]), 1)) : !args[2] || args.length < 4 ? 1 :Math.min(1, count)
             const sampah = global.db.data.users[m.sender].sampah
             switch (jualbeli) {
@@ -432,7 +431,16 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         
                         break
                     default:
-                        return conn.reply(m.chat, Kchat, m)
+                        return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
+                    mediaType: "VIDEO",
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
+                    thumbnail: thumb,
+                    sourceUrl: sgc
+                }
+                } })
                 }
                 break
             case 'sell': 
@@ -571,7 +579,16 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         } else conn.reply(m.chat, `🍌 Pisang Anda Tidak Cukup `, m)
                         break
                     default:
-                        return conn.reply(m.chat, Kchat, m)
+                        return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
+                    mediaType: "VIDEO",
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
+                    thumbnail: thumb,
+                    sourceUrl: sgc
+                }
+                } })
                 }
                 break
             case 'upgrade': 
@@ -619,7 +636,16 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                             } else conn.reply(m.chat, `Diamond Mu Tidak Cukup Untuk Mengupgrade Pickaxe ⛏️  Seharga ${uppickaxe} Diamond 💎`, m)
                             break
                             default:
-                            return conn.reply(m.chat, Kchat, m)
+                            return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
+                    mediaType: "VIDEO",
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
+                    thumbnail: thumb,
+                    sourceUrl: sgc
+                }
+                } })
                             }
                             break
                             case 'repair': 
@@ -659,20 +685,30 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         break
                             
                             default:
-                            return conn.reply(m.chat, Kchat, m)
-                            }
-                            break
-            default:
-                return conn.sendButtonDoc(m.chat, Kchat,wm, 'Inventory', '.inv',m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-                    mediaUrl: "https://Instagram.com/bot_whangsaf",
+                            return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
                     mediaType: "VIDEO",
-                    description: "https://Instagram.com/bot_whangsaf", 
-                    title: 'Simple Bot Esm',
-                    body: wm,
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
                     thumbnail: thumb,
                     sourceUrl: sgc
                 }
                 } })
+                            }
+                            break
+            default:
+                return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Invetory', '.inv']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
+                    mediaType: "VIDEO",
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
+                    thumbnail: thumb,
+                    sourceUrl: sgc
+                }
+                } })
+                
                         }
         } else if (/beli|buy/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
@@ -751,7 +787,16 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                     
                     break
                 default:
-                    return conn.reply(m.chat, Kchat, m)
+                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
+                    mediaType: "VIDEO",
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
+                    thumbnail: thumb,
+                    sourceUrl: sgc
+                }
+                } })
             }
         } else if (/sell|jual|/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
@@ -806,7 +851,16 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                     } else conn.reply(m.chat, `Diamond Anda Tidak Cukup `, m)
                     break
                 default:
-                    return conn.reply(m.chat, Kchat,m)
+                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
+                    mediaType: "VIDEO",
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
+                    thumbnail: thumb,
+                    sourceUrl: sgc
+                }
+                } })
             }
         } else if (/up|upgrade/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
@@ -822,7 +876,16 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         
                         break
                         default:
-                    return conn.reply(m.chat, Kchat,m)
+                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
+                    mediaType: "VIDEO",
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
+                    thumbnail: thumb,
+                    sourceUrl: sgc
+                }
+                } })
                          }
                     }else if (/repair/i.test(command)) {
             const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
@@ -838,23 +901,41 @@ bila sudah tidak ada harganya, berarti sudah tidak bisa dibeli / sudah level max
                         
                         break
                         default:
-                    return conn.reply(m.chat, Kchat,m)
+                    return conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
+                    mediaType: "VIDEO",
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
+                    thumbnail: thumb,
+                    sourceUrl: sgc
+                }
+                } })
                     
                     }
             }
     } catch (e) {
-        conn.reply(m.chat, Kchat,m)
+        conn.sendButton(m.chat, Kchat, wm,  null,[[ 'Ngechit', '.ngechit']], m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+                    mediaUrl: "https://Instagram.com/wudysoft.2",
+                    mediaType: "VIDEO",
+                    description: "https://Instagram.com/wudysoft.2", 
+                    title: wm,
+                    body: bottime,
+                    thumbnail: thumb,
+                    sourceUrl: sgc
+                }
+                } })
         console.log(e)
         if (DevMode) {
             for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
-                conn.sendMessage(jid, 'shops.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', MessageType.text)
+                conn.sendMessage(jid, 'shop.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', MessageType.text)
             }
         }
     }
 }
 
-handler.help = ['shops <sell | buy | upgrade | repair> <args>', 'toko <sell | buy | upgrade | repair> <args>']
+handler.help = ['shop <sell | buy | upgrade | repair> <args>', 'toko <sell | buy | upgrade | repair> <args>']
 handler.tags = ['rpg']
     
-handler.command = /^(shops|toko|buy|beli|sell|jual|up|upgrade|repair)$/i
+handler.command = /^(shop|toko|buy|beli|sell|jual|up|upgrade|repair)$/i
 export default handler
