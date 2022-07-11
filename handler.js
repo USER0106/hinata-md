@@ -120,6 +120,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.banteng)) user.banteng = 0
               if (!isNumber(user.batu)) user.batu = 0
               if (!isNumber(user.bawal)) user.bawal = 0
+              if (!isNumber(user.bawalbakar)) user.bawalbakar = 0
               if (!isNumber(user.bayam)) user.bayam = 0
               if (!isNumber(user.botol)) user.botol = 0
               if (!isNumber(user.bow)) user.bow = 0
@@ -187,6 +188,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.horseexp)) user.horseexp = 0
               if (!isNumber(user.horselastfeed)) user.horselastfeed = 0
               if (!isNumber(user.ikan)) user.ikan = 0
+              if (!isNumber(user.ikanbakar)) user.ikanbakar = 0
               if (!isNumber(user.intelligence)) user.intelligence = 0
               if (!isNumber(user.iron)) user.iron = 0
               if (!isNumber(user.jagung)) user.jagung = 0
@@ -201,6 +203,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.kentang)) user.kentang = 0
               if (!isNumber(user.kentanggoreng)) user.kentanggoreng = 0
               if (!isNumber(user.kepiting)) user.kepiting = 0
+              if (!isNumber(user.kepitingbakar)) user.kepitingbakar = 0
               if (!isNumber(user.kerbau)) user.kerbau = 0
               if (!isNumber(user.korbanngocok)) user.korbanngocok = 0
               if (!isNumber(user.kubis)) user.kubis = 0
@@ -252,6 +255,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lastwork)) user.lastwork = 0
               if (!isNumber(user.legendary)) user.legendary = 0
               if (!isNumber(user.lele)) user.lele = 0
+              if (!isNumber(user.lelebakar)) user.lelebakar = 0
               if (!isNumber(user.leleb)) user.leleb = 0
               if (!isNumber(user.leleg)) user.leleg = 0
               if (!isNumber(user.level)) user.level = 0
@@ -278,12 +282,14 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.nagalastclaim)) user.nagalastclaim = 0
               if (!isNumber(user.net)) user.net = 0
               if (!isNumber(user.nila)) user.nila = 0
+              if (!isNumber(user.nilabakar)) user.nilabakar = 0
               if (!isNumber(user.ojekk)) user.ojekk = 0
               if (!isNumber(user.oporayam)) user.oporayam = 0
               if (!isNumber(user.orca)) user.orca = 0
               if (!isNumber(user.pancing)) user.pancing = 0
               if (!isNumber(user.panda)) user.panda = 0
               if (!isNumber(user.paus)) user.paus = 0
+              if (!isNumber(user.pausbakar)) user.pausbakar = 0
               if (!isNumber(user.pc)) user.pc = 0
               if (!isNumber(user.pepesikan)) user.pepesikan = 0
               if (!isNumber(user.pertambangan)) user.pertambangan = 0
@@ -354,6 +360,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.troopcamp)) user.troopcamp = 0
               if (!isNumber(user.tumiskangkung)) user.tumiskangkung = 0
               if (!isNumber(user.udang)) user.udang = 0
+              if (!isNumber(user.udangbakar)) user.udangbakar = 0
               if (!isNumber(user.umpan)) user.umpan = 0
               if (!isNumber(user.uncommon)) user.uncommon = 0
               if (!isNumber(user.upgrader)) user.upgrader = 0
@@ -412,6 +419,7 @@ export async function handler(chatUpdate) {
                     banteng: 0,
                     batu: 0,
                     bawal: 0,
+                    bawalbakar: 0,
                     bayam: 0,
                     bow: 0,
                     bowdurability: 0,
@@ -474,6 +482,7 @@ export async function handler(chatUpdate) {
                     horseexp: 0,
                     horselastfeed: 0,
                     ikan: 0,
+                    ikanbakar: 0,
                     intelligence: 10,
                     iron: 0,
                     jagung: 0,
@@ -488,6 +497,7 @@ export async function handler(chatUpdate) {
                     kentang: 0,
                     kentanggoreng: 0,
                     kepiting: 0,
+                    kepitingbakar: 0,
                     kerbau : 0,
                     korbanngocok: 0,
                     kubis: 0,
@@ -530,6 +540,7 @@ export async function handler(chatUpdate) {
                     lbars: '[▒▒▒▒▒▒▒▒▒]',
                     legendary: 0,
                     lele: 0,
+                    lelebakar: 0,
                     leleb: 0,
                     leleg: 0,
                     level: 0,
@@ -563,12 +574,14 @@ export async function handler(chatUpdate) {
                     name: this.getName(m.sender),
                     net: 0,
                     nila: 0,
+                    nilabakar: 0,
                     ojekk: 0,
                     oporayam: 0,
                     orca: 0,
                     panda: 0,
                     pasangan: '',
                     paus: 0,
+                    pausbakar: 0,
                     pc : 0,
                     pc: false,
                     pepesikan: 0,
@@ -641,6 +654,7 @@ export async function handler(chatUpdate) {
                     troopcamp: 0,
                     tumiskangkung: 0,
                     udang: 0,
+                    udangbakar: 0,
                     umpan: 0,
                     uncommon: 0,
                     upgrader: 0,
