@@ -17,7 +17,10 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
         let bawal = `${Math.floor(Math.random() * 10)}`.trim() 
         let udang = `${Math.floor(Math.random() * 39)}`.trim()
         let paus = `${Math.floor(Math.random() * 2)}`.trim() 
-        let kepiting = `${Math.floor(Math.random() * 27)}`.trim() 
+        let kepiting = `${Math.floor(Math.random() * 27)}`.trim()
+        
+        
+        
            let _psepick= `${pickRandom(['1', '0', '0', '1'])}`
             let psepick = (_psepick * 1)
             let _psenjata = `${pickRandom(['1', '0', '0', '0'])}`
@@ -26,29 +29,26 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
         let mcng = `
 *Your 🎣Fishing Results!*
         
-🐟Ikan nila : ${nila}
-🐡Bawal : ${bawal}
-🐟lele : ${lele}
+🐟 nila : ${nila}
+🐡 bawal : ${bawal}
+🐟 lele : ${lele}
 🐟 ikan : ${ikan}
 🦐 udang : ${udang}
-🐋 Paus: ${paus}
-🦀 Kepiting: ${kepiting}
+🐋 paus: ${paus}
+🦀 kepiting: ${kepiting}
 
-_total pancingan↓_
-${nila + bawal + ikan + lele}
-        
 you can cook it to increase stamina or blood💉
 _example:_
-${ usedPrefix }Cook catfish `    
+${ usedPrefix }cook`    
         setTimeout(() => {                 
         conn.reply( m.chat, mcng, m)
          if (psepick > 0 ) {
          	global.db.data.users[m.sender].psepick += psepick * 1
-         conn.sendButton( m.chat, `You Get 🎁chest weapons epic ${psepick} item`, `Sad-Bot`, [[`again`, `.mancing`]], m)
+         conn.sendButton( m.chat, `You Get 🎁chest weapons epic ${psepick} item`, wm, [[`again`, `.mancing`]], m)
          } 
         if  (psenjata > 0 ) {
         	global.db.data.users[m.sender].psenjata+= psenjata * 1
-        conn.sendButton( m.chat, `You Get 🎁chest weapons ${psenjata} item`, `Sad-Bot`, [[`Again`, `.mancing`]], m)
+        conn.sendButton( m.chat, `You Get 🎁chest weapons ${psenjata} item`, wm, [[`Again`, `.mancing`]], m)
         	}
         }, 38000)
 
