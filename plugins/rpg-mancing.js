@@ -27,7 +27,7 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
            let psenjata = (_psenjata * 1)
            
         let mcng = `
-*Your 🎣Fishing Results!*
+*Hasil 🎣Fishing Kamu!*
         
 🐟 nila : ${nila}
 🐡 bawal : ${bawal}
@@ -37,7 +37,7 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
 🐋 paus: ${paus}
 🦀 kepiting: ${kepiting}
 
-you can cook it to increase stamina or blood💉
+Kamu bisa memasak ini, dan memakannya💉
 _example:_
 ${ usedPrefix }cook`    
         setTimeout(() => {                 
@@ -53,16 +53,16 @@ ${ usedPrefix }cook`
         }, 38000)
 
         setTimeout(() => {
-                     m.reply(`*The hook is pulled by the fish, and you try to pull it*`)
+                     m.reply(`_Yey... Sepertinya dapat sesuatu..._`)
                       }, 28000)
         setTimeout(() => {
-                     m.reply(`*Waiting for the fish to be hooked*`)
+                     m.reply(`_Menunggu Strike..._`)
                       }, 18000)
        setTimeout(() => {
-                     m.reply(`*you throw a fishing hook into the river*`)
+                     m.reply(`_Mulai Memancing..._`)
                       }, 8000)
        setTimeout(() => {
-                     m.reply(`*you go fishing🎣*`)
+                     m.reply(`_Pergi Memancing... 🎣_`)
                       }, 0)
                       
         global.db.data.users[m.sender].nila += nila * 1

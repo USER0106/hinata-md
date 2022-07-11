@@ -256,9 +256,9 @@ let handler = async (m, {
          case 'phonix':
             if (phonix == 0) return m.reply('*You not have a pet Phonix*')
             if (phonix == 5) return m.reply('*Your pet is already level max *')
-            let __waktux = (new Date - db.data.users[m.sender].phonixlastclaim)
-            let _waktux = (600000 - __waktux)
-            let waktux = clockString(_waktux)
+            let __wtux = (new Date - db.data.users[m.sender].phonixlastclaim)
+            let _wtux = (600000 - __wtux)
+            let wtux = clockString(_wtux)
             if (new Date - db.data.users[m.sender].phonixlastclaim > 600000) {
                 if (db.data.users[m.sender].makananphonix > 0) {
                     db.data.users[m.sender].makananphonix -= 1
@@ -277,14 +277,14 @@ let handler = async (m, {
                         }
                     }
                 } else m.reply(`Makanan pet kamu tidak cukup`)
-            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${waktux}* lagi`)
+            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${wtux}* lagi`)
             break
         case 'griffin':
             if (griffin == 0) return m.reply('*You not have a pet Griffin*')
             if (griffin == 5) return m.reply('*Your pet is already level max *')
-            let __waktufin = (new Date - db.data.users[m.sender].griffinastclaim)
-            let _waktufin = (600000 - __waktufin)
-            let waktufin = clockString(_waktufin)
+            let __wtfin = (new Date - db.data.users[m.sender].griffinastclaim)
+            let _wtfin = (600000 - __wtfin)
+            let wtfin = clockString(_wtfin)
             if (new Date - db.data.users[m.sender].griffinlastclaim > 600000) {
                 if (db.data.users[m.sender].makanangriffin > 0) {
                     db.data.users[m.sender].makanangriffin -= 1
@@ -303,14 +303,14 @@ let handler = async (m, {
                         }
                     }
                 } else m.reply(`Makanan pet kamu tidak cukup`)
-            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${waktufin}* lagi`)
+            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${wtfin}* lagi`)
             break
         case 'cat':
             if (cat == 0) return m.reply('*You not have a pet cat*')
             if (cat == 5) return m.reply('*Your pet is already level max *')
-            let __waktu = (new Date - db.data.users[m.sender].catlastclaim)
-            let _waktu = (600000 - __waktu)
-            let waktu = clockString(_waktu)
+            let __wktu = (new Date - db.data.users[m.sender].catlastclaim)
+            let _wktu = (600000 - __wktu)
+            let wktu = clockString(_wktu)
             if (new Date - db.data.users[m.sender].catlastclaim > 600000) {
                 if (db.data.users[m.sender].makananpet > 0) {
                     db.data.users[m.sender].makananpet -= 1
@@ -329,14 +329,14 @@ let handler = async (m, {
                         }
                     }
                 } else m.reply(`Makanan pet kamu tidak cukup`)
-            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${waktu}* lagi`)
+            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${wktu}* lagi`)
             break
             case 'rubah':
             if (rubah == 0) return m.reply('*Kamu belum memiliki Pet Rubah*')
             if (rubah == 10) return m.reply('*Pet kamu dah lvl max*')
-            let __waktur = (new Date - user.foxlastfeed)
-            let _waktur = (600000 - __waktur)
-            let waktur = clockString(_waktur)
+            let __wtur = (new Date - user.foxlastfeed)
+            let _wtur = (600000 - __wtur)
+            let wtur = clockString(_wtur)
             if (new Date - user.foxlastfeed > 600000) {
                 if (user.petFood > 0) {
                     user.petFood -= 1
@@ -352,14 +352,14 @@ let handler = async (m, {
                         }
                     }
                 } else m.reply(`Makanan pet kamu tidak cukup`)
-            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${waktur}* lagi`)
+            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${wtur}* lagi`)
             break
         case 'kucing':
             if (kucing == 0) return m.reply('*Kamu belum memiliki Pet Kucing*')
             if (kucing == 10) return m.reply('*Pet kamu dah lvl max*')
-            let __waktuc = (new Date - user.catlastfeed)
-            let _waktuc = (600000 - __waktuc)
-            let waktuc = clockString(_waktuc)
+            let __wtuc = (new Date - user.catlastfeed)
+            let _wtuc = (600000 - __wtuc)
+            let wtuc = clockString(_wtuc)
             if (new Date - user.catlastfeed > 600000) {
                 if (user.petFood > 0) {
                     user.petFood -= 1
@@ -375,14 +375,14 @@ let handler = async (m, {
                         }
                     }
                 } else m.reply(`Makanan pet kamu tidak cukup`)
-            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${waktuc}* lagi`)
+            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${wtuc}* lagi`)
             break
         case 'anjing':
             if (anjing == 0) return m.reply('*Kamu belum memiliki Pet Anjing*')
             if (anjing == 10) return m.reply('*Pet kamu dah lvl max*')
-            let __waktua = (new Date - user.doglastfeed)
-            let _waktua = (600000 - __waktua)
-            let waktua = clockString(_waktua)
+            let __wtua = (new Date - user.doglastfeed)
+            let _wtua = (600000 - __wtua)
+            let wtua = clockString(_wtua)
             if (new Date - user.doglastfeed > 600000) {
                 if (user.petFood > 0) {
                     user.petFood -= 1
@@ -398,14 +398,14 @@ let handler = async (m, {
                         }
                     }
                 } else m.reply(`Makanan pet kamu tidak cukup`)
-            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${waktua}* lagi`)
+            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${wtua}* lagi`)
             break
         case 'kuda':
             if (kuda == 0) return m.reply('*Kamu belum memiliki Pet Kuda*')
             if (kuda == 10) return m.reply('*Pet kamu dah lvl max*')
-            let __waktuk = (new Date - user.horselastfeed)
-            let _waktuk = (600000 - __waktuk)
-            let waktuk = clockString(_waktuk)
+            let __wtuk = (new Date - user.horselastfeed)
+            let _wtuk = (600000 - __wtuk)
+            let wtuk = clockString(_wtuk)
             if (new Date - user.horselastfeed > 600000) {
                 if (user.petFood > 0) {
                     user.petFood -= 1
@@ -421,7 +421,7 @@ let handler = async (m, {
                         }
                     }
                 } else m.reply(`Makanan pet kamu tidak cukup`)
-            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${waktuk}* lagi`)
+            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${wtuk}* lagi`)
             break
         default:
         await conn.sendMessage(m.chat, {
