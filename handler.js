@@ -565,13 +565,10 @@ export async function handler(chatUpdate) {
                     misi: "",
                     money: 0,
                     monyet : 0,
-                    monyet: 0,
                     mythic: 0,
                     naga: 0,
                     nagalastclaim: 0,
-                    name: conn.getName(m.sender),
                     name: m.name,
-                    name: this.getName(m.sender),
                     net: 0,
                     nila: 0,
                     nilabakar: 0,
@@ -583,7 +580,6 @@ export async function handler(chatUpdate) {
                     paus: 0,
                     pausbakar: 0,
                     pc : 0,
-                    pc: false,
                     pepesikan: 0,
                     pet: 0,
                     phonix: 0,
@@ -671,59 +667,49 @@ export async function handler(chatUpdate) {
             if (typeof chat !== 'object')
                 global.db.data.chats[m.chat] = {}
             if (chat) {
-                if (!('isBanned' in chat))
-                    chat.isBanned = false
-                if (!('welcome' in chat))
-                    chat.welcome = true
-                if (!('detect' in chat))
-                    chat.detect = true
-                if (!('sWelcome' in chat))
-                    chat.sWelcome = ''
-                if (!('sBye' in chat))
-                    chat.sBye = ''
-                if (!('sPromote' in chat))
-                    chat.sPromote = ''
-                if (!('sDemote' in chat))
-                    chat.sDemote = ''
-                if (!('delete' in chat))
-                    chat.delete = false
-                
-                if (!('antiLink' in chat))
-                    chat.antiLink = false
-                if (!('viewonce' in chat))
-                    chat.viewonce = false
-                if (!('antiToxic' in chat))
-                    chat.antiToxic = true
-                if (!('simi' in chat))
-                    chat.simi = false
-                if (!('nsfw' in chat))
-                    chat.nsfw = false
-                if (!('premnsfw' in chat))
-                    chat.premnsfw = false
-                if (!isNumber(chat.expired))
-                    chat.expired = 0
-               if (!('getmsg' in chat)) 
-                    chat.getmsg = true
-         
+                if (!('antiDelete' in chat)) chat.antiDelete = false
+                if (!('antiLink' in chat)) chat.antiLink = false
+                if (!('antiToxic' in chat)) chat.antiToxic = true
+                if (!('delete' in chat)) chat.delete = false
+                if (!('detect' in chat)) chat.detect = false
+                if (!('getmsg' in chat))  chat.getmsg = true
+                if (!('isBanned' in chat)) chat.isBanned = false
+                if (!('nsfw' in chat)) chat.nsfw = false
+                if (!('premium' in chat)) chat.premium = false
+                if (!('premiumTime' in chat)) chat.premiumTime = false
+                if (!('premnsfw' in chat)) chat.premnsfw = false
+                if (!('sBye' in chat)) chat.sBye = ''
+                if (!('sDemote' in chat)) chat.sDemote = ''
+                if (!('simi' in chat)) chat.simi = false
+                if (!('sPromote' in chat)) chat.sPromote = ''
+                if (!('sWelcome' in chat)) chat.sWelcome = ''
+                if (!('viewonce' in chat)) chat.viewonce = false
+                if (!('viewOnce' in chat)) chat.viewOnce = false
+                if (!('welcome' in chat)) chat.welcome = true
+                if (!isNumber(chat.expired)) chat.expired = 0
             } else
                 global.db.data.chats[m.chat] = {
-                    isBanned: false,
-                    welcome: true,
-                    detect: true,
-                    sWelcome: '',
-                    sBye: '',
-                    sPromote: '',
-                    sDemote: '',
-                   
-                    delete: false,
-                    antiLink: false,
-                    viewonce: false,
-                    antiToxic: true,
-                    simi: false,
-                    expired: 0,
-                    nsfw: false,
-                    premnsfw: false,
-                    getmsg: true,
+                    antiDelete: false,
+	                antiLink: false,
+	                antiToxic: true,
+	                delete: false,
+	                detect: false,
+	                expired: 0,
+	                getmsg: true,
+	                isBanned: false,
+	                nsfw: false,
+	                premium: false,
+	                premiumTime: false,
+	                premnsfw: false,
+	                sBye: '',
+	                sDemote: '',
+	                simi: false,
+	                sPromote: '',
+	                sWelcome: '',
+	                viewOnce: false,
+	                viewonce: false,
+	                welcome: true
+	                
                 }
             let settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
